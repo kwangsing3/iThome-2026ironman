@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560"
+  font-family="'Noto Sans TC','Microsoft JhengHei','PingFang TC','Heiti TC',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="7" refY="3" orient="auto"
+      markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#8a94a6" />
+    </marker>
+  </defs>
+
+  <rect width="960" height="560" fill="#ffffff" />
+
+  <!-- title -->
+  <text x="60" y="50" font-size="29" font-weight="700" fill="#1a2233">在台灣，IT 設備不在機房裡——是在廠房裡</text>
+  <text x="60" y="82" font-size="16" fill="#5b667a">系統整合商的真實處境:為什麼企業 IT 單位天生弱勢</text>
+  <line x1="60" y1="100" x2="900" y2="100" stroke="#e5e9f0" stroke-width="1" />
+
+  <!-- LEFT: 製造端(強勢、體量大) -->
+  <rect x="60" y="140" width="360" height="230" rx="12" fill="#1f3a5f" />
+  <text x="84" y="182" font-size="22" font-weight="700" fill="#ffffff">製造業 / 電子業</text>
+  <text x="84" y="206" font-size="14" fill="#aebfd6">台股市值排得上名字的龍頭</text>
+  <text x="84" y="250" font-size="15" fill="#eaf0f8">• 廠房裡有市值上億的生產機台</text>
+  <text x="84" y="284" font-size="15" fill="#eaf0f8">• 有預算時,優先投入生產設備</text>
+  <text x="84" y="318" font-size="15" fill="#eaf0f8">• 對 IT 採購握有主導權</text>
+  <rect x="84" y="336" width="112" height="26" rx="13" fill="#3f5f8a" />
+  <text x="140" y="354" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">話語權大</text>
+
+  <!-- RIGHT: IT 單位(弱勢、體量小) -->
+  <rect x="600" y="180" width="300" height="150" rx="12" fill="#eef1f6" stroke="#c8d0dc"
+    stroke-width="1.5" />
+  <text x="624" y="216" font-size="20" font-weight="700" fill="#2b3752">企業 IT 單位</text>
+  <text x="624" y="252" font-size="14" fill="#445068">• 維運資訊系統與設備</text>
+  <text x="624" y="280" font-size="14" fill="#445068">• 預算排在生產機台之後</text>
+  <text x="624" y="308" font-size="14" fill="#445068">• 話語權小,只能遷就</text>
+
+  <!-- 資源拔河:繩子連兩端,結被拉向製造端 -->
+  <text x="510" y="238" font-size="14" font-weight="700" fill="#8a94a6" text-anchor="middle">資源拔河</text>
+  <line x1="420" y1="255" x2="600" y2="255" stroke="#c8d0dc" stroke-width="3" />
+  <circle cx="468" cy="255" r="9" fill="#c2410c" />
+  <line x1="560" y1="288" x2="452" y2="288" stroke="#8a94a6" stroke-width="1.6"
+    marker-end="url(#arrow)" />
+  <text x="512" y="308" font-size="12" fill="#8a94a6" text-anchor="middle">有限的預算流向生產端</text>
+
+  <!-- 收束:為什麼這變成 AI 的位置 -->
+  <rect x="60" y="410" width="840" height="112" rx="10" fill="#f5f7fa" />
+  <rect x="60" y="410" width="6" height="112" rx="3" fill="#1f6f5c" />
+  <text x="92" y="452" font-size="16" fill="#33405a">結果:IT 的評估、設計、測試、交接,常被整包外包給下游廠商;</text>
+  <text x="92" y="480" font-size="16" fill="#33405a">規模、速度、不間斷這幾道牆,在這行反而更沒人接得住——</text>
+  <text x="92" y="508" font-size="16" font-weight="700" fill="#1f6f5c">這正是 AI 該站的位置(D4 起逐一拆解)。</text>
+</svg>
