@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <rect x="0" y="0" width="760" height="480" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="759" height="479" fill="none" stroke="#e5e7eb"/>
+
+  <!-- 標題 -->
+  <text x="380" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#111827">加人是線性,組合是指數</text>
+  <text x="380" y="62" text-anchor="middle" font-size="14" fill="#6b7280">每多一個維度,要比對的組合不是加上去,是乘上去——人力永遠追不上</text>
+
+  <!-- 座標軸 -->
+  <line x1="70" y1="400" x2="690" y2="400" stroke="#374151" stroke-width="2"/>
+  <line x1="70" y1="400" x2="70" y2="90" stroke="#374151" stroke-width="2"/>
+  <!-- Y 箭頭 -->
+  <polygon points="70,84 66,94 74,94" fill="#374151"/>
+  <!-- X 箭頭 -->
+  <polygon points="696,400 686,396 686,404" fill="#374151"/>
+
+  <!-- 軸標 -->
+  <text x="380" y="440" text-anchor="middle" font-size="14" fill="#374151">維度增加 →(型號 × 相容 × 折扣 × 版本 × 設備…)</text>
+  <text x="30" y="245" text-anchor="middle" font-size="14" fill="#374151" transform="rotate(-90 30 245)">工作量 / 要比對的組合數</text>
+
+  <!-- 指數曲線(組合) -->
+  <polyline fill="none" stroke="#dc2626" stroke-width="3.5"
+    points="70,397.9 147.5,396 225,392.4 302.5,385.5 380,372.4 457.5,347.6 535,300.4 612.5,210.7 690,40.4"/>
+  <!-- 線性線(人力) -->
+  <polyline fill="none" stroke="#2563eb" stroke-width="3.5"
+    points="70,400 147.5,383.1 225,366.1 302.5,349.2 380,332.2 457.5,315.3 535,298.4 612.5,281.4 690,264.5"/>
+
+  <!-- 端點 -->
+  <circle cx="690" cy="40.4" r="5" fill="#dc2626"/>
+  <circle cx="690" cy="264.5" r="5" fill="#2563eb"/>
+
+  <!-- 曲線標籤 -->
+  <text x="600" y="150" text-anchor="end" font-size="16" font-weight="700" fill="#dc2626">組合(指數)</text>
+  <text x="600" y="172" text-anchor="end" font-size="12" fill="#b91c1c">×、×、×… 一路翻倍</text>
+  <text x="612" y="256" font-size="16" font-weight="700" fill="#2563eb">人力(線性)</text>
+  <text x="612" y="278" font-size="12" fill="#1d4ed8">請一個人 +1、+1…</text>
+
+  <!-- 「甩開」的落差標註 -->
+  <line x1="690" y1="52" x2="690" y2="258" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="710" y="150" font-size="13" font-weight="700" fill="#6b7280" transform="rotate(90 710 150)">永遠追不上的缺口</text>
+</svg>
