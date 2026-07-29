@@ -38,6 +38,7 @@
 | GraphQL introspection                      | GraphQL 結構自省 | 向 GraphQL API 反問它自己的 schema 長什麼樣的機制。                   |
 | device state dump (show tech-support)      | 設備狀態檔       | 設備一次匯出的完整原始狀態(`show tech-support` 輸出),動輒數萬行;工程師口語稱 dump。**全系列固定用「設備狀態檔」**,每篇首次出現掛「(工程師常說的 dump)」當 gloss;`show tech-support` 指令名保留。 |
 | Deterministic Fact Layer + Generative Judgment Layer | **確定性事實層 + 生成式判讀層** | 三系統共用的分工線:有標準答案、可複現的事實一律交確定性程式算(＝事實層);判讀、跨章推論、行文交 LLM(＝判讀層)。**D20 首次命名,D23/D28/D30 沿用**;口語版招牌句「事實靠程式、行文靠 AI」為其別名。 |
+| Platform / Foundation (底座) | **底座 / AI 生產線** | 把工具呼叫、記憶、MCP 標準化、任務拆解、成本追蹤等共通手法累積成的**可複用開發底座**;三套系統是長在這底座上的成品。是**敘事拍三「交棒」**的載體(把底座交給讀者發揮)。**D28 首次命名「AI 生產線」,D30 交棒時沿用**。🚫 保密:一律停在「底座/生產線」抽象層,**不揭露實際部署規模、內部架構、營運量**(防跨篇反推公司規模,見 series-review R6)。 |
 
 > 用詞一致性檢查:同一概念**全系列只用一個中文詞**。避免「擬單/報價/詢價」混用、「向量資料庫/向量庫/vector store」混用。
 
