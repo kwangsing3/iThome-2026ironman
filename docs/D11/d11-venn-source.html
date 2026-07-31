@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; background: #fcfcfb; }
+  .viz-root {
+    --surface-1: #fcfcfb;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #7a7873;
+    --ring: #2a78d6;          /* 六圈同色:它們是同一種東西(必要條件)的六個實例 */
+    width: 1280px;
+    padding: 40px 44px 30px;
+    box-sizing: border-box;
+    background: var(--surface-1);
+    font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+  }
+  .title { font-size: 31px; font-weight: 700; color: var(--text-primary); }
+  .subtitle { font-size: 17px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5; }
+  .foot { font-size: 14px; color: var(--text-muted); margin-top: 6px; }
+  svg { display: block; margin: 0 auto; }
+  .lbl { font-size: 21px; font-weight: 700; fill: var(--text-primary); }
+  .lbl-sub { font-size: 15px; fill: var(--text-secondary); }
+  .center-lbl { font-size: 21px; font-weight: 700; fill: var(--text-primary); }
+  .center-sub { font-size: 15px; fill: var(--text-secondary); }
+</style>
+
+<div class="viz-root">
+  <div class="title">能真的在企業裡把 AI 導入落地的人，是六個條件的交集</div>
+  <div class="subtitle">單獨看每一項，公司裡到處都有這樣的人。每疊一個條件，剩下的人就少一輪——最後剩中間那一小塊。</div>
+
+  <svg width="1190" height="900" viewBox="-595 -460 1190 900" role="img"
+       aria-label="六個條件的交集圖:能跨部門負責、懂 AI 能做什麼、懂程式設計、懂基礎設施 infra、懂公司的商業模型、手上有資源。六圈重疊之後只剩正中央一小塊區域,代表同時具備六項條件的人極少。圖為示意,面積不代表統計比例。">
+    <defs>
+      <!-- 逐層裁切出六圓的交集;圓心在半徑 175 的環上每 60 度一個,圓半徑 205(>175 才會全部含住原點) -->
+      <clipPath id="k1"><circle cx="0"       cy="-175"  r="205"/></clipPath>
+      <clipPath id="k2" clip-path="url(#k1)"><circle cx="151.6"  cy="-87.5" r="205"/></clipPath>
+      <clipPath id="k3" clip-path="url(#k2)"><circle cx="151.6"  cy="87.5"  r="205"/></clipPath>
+      <clipPath id="k4" clip-path="url(#k3)"><circle cx="0"      cy="175"   r="205"/></clipPath>
+      <clipPath id="k5" clip-path="url(#k4)"><circle cx="-151.6" cy="87.5"  r="205"/></clipPath>
+      <clipPath id="k6" clip-path="url(#k5)"><circle cx="-151.6" cy="-87.5" r="205"/></clipPath>
+    </defs>
+
+    <g fill="var(--ring)" fill-opacity="0.075" stroke="var(--ring)" stroke-width="1.75" stroke-opacity="0.75">
+      <circle cx="0"       cy="-175"  r="205"/>
+      <circle cx="151.6"   cy="-87.5" r="205"/>
+      <circle cx="151.6"   cy="87.5"  r="205"/>
+      <circle cx="0"       cy="175"   r="205"/>
+      <circle cx="-151.6"  cy="87.5"  r="205"/>
+      <circle cx="-151.6"  cy="-87.5" r="205"/>
+    </g>
+
+    <!-- 六圈交集:正中央那一小塊 -->
+    <g clip-path="url(#k6)">
+      <rect x="-595" y="-460" width="1190" height="900" fill="#0b0b0b" fill-opacity="0.85"/>
+    </g>
+
+    <!-- 中央引線:水平往右,x>337 才脫離所有圓 -->
+    <path d="M 0 0 L 352 0" fill="none" stroke="var(--surface-1)" stroke-width="5"/>
+    <path d="M 0 0 L 352 0" fill="none" stroke="var(--text-secondary)" stroke-width="1.5"/>
+    <text class="center-lbl" x="364" y="-4">就是這一塊</text>
+    <text class="center-sub" x="364" y="22">同時滿足六項的人</text>
+
+    <!-- 六個標籤:沿各圓心方向放到圈外 -->
+    <g text-anchor="middle">
+      <text class="lbl"     x="0" y="-408">能跨部門負責</text>
+      <text class="lbl-sub" x="0" y="-383">推得動不歸自己管的人</text>
+    </g>
+    <g text-anchor="start">
+      <text class="lbl"     x="392" y="-222">懂 AI 能做什麼</text>
+      <text class="lbl-sub" x="392" y="-197">知道它到底吃得下什麼</text>
+    </g>
+    <g text-anchor="start">
+      <text class="lbl"     x="392" y="200">懂程式設計</text>
+      <text class="lbl-sub" x="392" y="225">能把想法真的寫出來</text>
+    </g>
+    <g text-anchor="middle">
+      <text class="lbl"     x="0" y="410">懂基礎設施 infra</text>
+      <text class="lbl-sub" x="0" y="435">接得上公司的網路、主機與權限</text>
+    </g>
+    <g text-anchor="end">
+      <text class="lbl"     x="-392" y="200">懂公司的商業模型</text>
+      <text class="lbl-sub" x="-392" y="225">說得出公司靠什麼賺錢</text>
+    </g>
+    <g text-anchor="end">
+      <text class="lbl"     x="-392" y="-222">手上有資源</text>
+      <text class="lbl-sub" x="-392" y="-197">調得動時間、人與預算</text>
+    </g>
+  </svg>
+
+  <div class="foot">示意圖，用來說明條件疊加後交集會急速縮小；圈的大小與交集面積不代表任何統計比例。</div>
+</div>
