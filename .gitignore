@@ -1,2 +1,3 @@
 # 發佈用的剝離產物（由 scripts/strip-comments.mjs 產生，不入版控）
 publish/
+受眾分析/
